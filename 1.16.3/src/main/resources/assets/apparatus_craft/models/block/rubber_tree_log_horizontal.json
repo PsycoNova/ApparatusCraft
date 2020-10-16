@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "apparatus_craft:block/rubber_tree_log_end",
+    "side": "apparatus_craft:block/rubber_tree_log_side"
+  }
+}

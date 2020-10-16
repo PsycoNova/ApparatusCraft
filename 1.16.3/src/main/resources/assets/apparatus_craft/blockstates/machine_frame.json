@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": [
+      { "model": "apparatus_craft:block/MACHINE_FRAME" }
+    ]
+  }
+}

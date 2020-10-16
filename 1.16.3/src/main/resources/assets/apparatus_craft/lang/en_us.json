@@ -1,4 +1,10 @@
 {
-  "item.apparatus_craft.machine_frame": "Machine Frame",
-  "itemGroup.apparatus_craft": "Apparatus Craft"
+  "itemGroup.apparatus_craft": "Apparatus Craft",
+
+  "block.apparatus_craft.rubber_tree_log": "Rubber Tree Log",
+  "block.apparatus_craft.rubber_tree_log_stripped": "Stripped Rubber Tree Log",
+  "block.apparatus_craft.rubber_tree_log_partially_stripped": "Prepped Rubber Tree Log",
+  "block.apparatus_craft.rubber_tree_leaves": "Rubber Tree Leaves",
+
+  "item.apparatus_craft.machine_frame": "Machine Frame"
 }

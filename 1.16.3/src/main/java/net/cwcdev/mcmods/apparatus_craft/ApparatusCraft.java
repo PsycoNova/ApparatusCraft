@@ -1,5 +1,7 @@
 package net.cwcdev.mcmods.apparatus_craft;
 
+import net.cwcdev.mcmods.apparatus_craft.init.ModBlocks;
+import net.cwcdev.mcmods.apparatus_craft.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +29,13 @@ public class ApparatusCraft
     private static final Logger LOGGER = LogManager.getLogger();
 
     public ApparatusCraft() {
+        // Register ModBlocks
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        // Register ModItems
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        /*
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -38,8 +47,10 @@ public class ApparatusCraft
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        */
     }
 
+    /*
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
@@ -78,8 +89,8 @@ public class ApparatusCraft
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            LOGGER.info("HELLO from Register Block");
+
         }
     }
+    */
 }

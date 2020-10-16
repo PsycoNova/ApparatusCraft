@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import java.util.function.Supplier;
 
 public class ModItemGroups {
-	public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ApparatusCraft.MODID, () -> new ItemStack(ModItems.MACHINE_FRAME));
+	public static final ItemGroup MOD_ITEM_GROUP = new ModItemGroup(ApparatusCraft.MODID, () -> new ItemStack(ModItems.MACHINE_FRAME.get()));
 
 	public static class ModItemGroup extends ItemGroup {
 		private final Supplier<ItemStack> iconSupplier;
