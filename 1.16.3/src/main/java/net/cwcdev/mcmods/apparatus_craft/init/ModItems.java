@@ -19,6 +19,7 @@ public class ModItems {
 	public static final RegistryObject<Item> RUBBER_TREE_LOG_STRIPPED = ITEMS.register("rubber_tree_log_stripped", () -> new BlockItem(ModBlocks.RUBBER_TREE_LOG_STRIPPED.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<Item> RUBBER_TREE_LOG_PARTIALLY_STRIPPED = ITEMS.register("rubber_tree_log_partially_stripped", () -> new BlockItem(ModBlocks.RUBBER_TREE_LOG_PARTIALLY_STRIPPED.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<Item> RUBBER_TREE_LEAVES = ITEMS.register("rubber_tree_leaves", () -> new BlockItem(ModBlocks.RUBBER_TREE_LEAVES.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> RUBBER_TREE_PLANK = ITEMS.register("rubber_tree_plank", () -> new BlockItem(ModBlocks.RUBBER_TREE_PLANK.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 
 	// Misc
 	public static final RegistryObject<Item> MACHINE_FRAME = ITEMS.register("machine_frame", () -> new BlockItem(ModBlocks.MACHINE_FRAME.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
