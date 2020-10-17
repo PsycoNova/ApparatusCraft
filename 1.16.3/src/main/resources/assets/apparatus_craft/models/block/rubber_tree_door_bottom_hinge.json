@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "top": "apparatus_craft:block/rubber_tree_door_top",
+    "bottom": "apparatus_craft:block/rubber_tree_door_bottom"
+  }
+}

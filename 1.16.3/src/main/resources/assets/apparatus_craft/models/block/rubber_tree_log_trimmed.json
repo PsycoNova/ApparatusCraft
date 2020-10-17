@@ -1,6 +1,6 @@
 {
-	"xparent": "minecraft:block/orientable",
-	"xparent": "minecraft:block/cube_column",
+	"credit": "Made with Blockbench",
+	"parent": "block/cube",
 	"textures": {
 		"0": "apparatus_craft:block/rubber_tree_log_inside",
 		"1": "apparatus_craft:block/rubber_tree_log_top",

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_bottom",
+  "textures": {
+    "texture": "apparatus_craft:block/rubber_tree_trapdoor"
+  }
+}

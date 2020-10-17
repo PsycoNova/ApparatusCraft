@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "apparatus_craft:rubber_tree_log",
+    "apparatus_craft:rubber_tree_wood",
+    "apparatus_craft:rubber_tree_log_stripped",
+    "apparatus_craft:rubber_tree_wood_stripped",
+    "apparatus_craft:rubber_tree_log_trimmed"
+  ]
+}

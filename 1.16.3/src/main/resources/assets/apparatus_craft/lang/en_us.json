@@ -3,9 +3,26 @@
 
   "block.apparatus_craft.rubber_tree_log": "Rubber Tree Log",
   "block.apparatus_craft.rubber_tree_log_stripped": "Stripped Rubber Tree Log",
-  "block.apparatus_craft.rubber_tree_log_partially_stripped": "Prepped Rubber Tree Log",
+  "block.apparatus_craft.rubber_tree_log_trimmed": "Trimmed Rubber Tree Log",
+  "block.apparatus_craft.rubber_tree_wood": "Rubber Tree Wood",
+  "block.apparatus_craft.rubber_tree_wood_stripped": "Stripped Rubber Tree Wood",
   "block.apparatus_craft.rubber_tree_leaves": "Rubber Tree Leaves",
-  "block.apparatus_craft.rubber_tree_planks": "Rubber Tree Plank",
+  "block.apparatus_craft.rubber_tree_plank": "Rubber Tree Plank",
+  "block.apparatus_craft.rubber_tree_sapling": "Rubber Tree Sapling",
+  "block.apparatus_craft.rubber_tree_sapling_potted": "Potted Rubber Tree Sapling",
+  "block.apparatus_craft.rubber_tree_stairs": "Rubber Tree Stairs",
+  "block.apparatus_craft.rubber_tree_sign": "Rubber Tree Sign",
+  "block.apparatus_craft.rubber_tree_door": "Rubber Tree Door",
+  "block.apparatus_craft.rubber_tree_pressure_plate": "Rubber Tree Pressure Plate",
+  "block.apparatus_craft.rubber_tree_fence": "Rubber Tree Fence",
+  "block.apparatus_craft.rubber_tree_trapdoor": "Rubber Tree Trapdoor",
+  "block.apparatus_craft.rubber_tree_fence_gate": "Rubber Tree Fence Gate",
+  "block.apparatus_craft.rubber_tree_button": "Rubber Tree Button",
+  "block.apparatus_craft.rubber_tree_slab": "Rubber Tree Slab",
+  "item.apparatus_craft.rubber_tree_boat": "Rubber Tree Boat",
 
-  "item.apparatus_craft.machine_frame": "Machine Frame"
+  "block.apparatus_craft.silicon_ore": "Silicon Ore",
+  "item.apparatus_craft.silicon": "Silicon",
+
+  "block.apparatus_craft.machine_frame": "Machine Frame"
 }

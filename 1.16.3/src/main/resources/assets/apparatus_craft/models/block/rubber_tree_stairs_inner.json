@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "apparatus_craft:block/rubber_tree_plank",
+    "top": "apparatus_craft:block/rubber_tree_plank",
+    "side": "apparatus_craft:block/rubber_tree_plank"
+  }
+}

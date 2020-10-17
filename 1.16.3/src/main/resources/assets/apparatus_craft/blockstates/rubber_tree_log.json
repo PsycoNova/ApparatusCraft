@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": [
-      { "model": "apparatus_craft:block/rubber_tree_log" }
-    ]
+    "axis=x": {
+      "model": "apparatus_craft:block/rubber_tree_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "apparatus_craft:block/rubber_tree_log"
+    },
+    "axis=z": {
+      "model": "apparatus_craft:block/rubber_tree_log_horizontal",
+      "x": 90
+    }
   }
 }

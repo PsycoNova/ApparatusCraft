@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "apparatus_craft:block/rubber_tree_plank"
+  }
+}

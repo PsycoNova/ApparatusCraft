@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "apparatus_craft:block/rubber_tree_slab"
+    },
+    "type=double": {
+      "model": "apparatus_craft:block/rubber_tree_planks"
+    },
+    "type=top": {
+      "model": "apparatus_craft:block/rubber_tree_slab_top"
+    }
+  }
+}

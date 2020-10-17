@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "apparatus_craft:block/rubber_tree_plank"
+  }
+}

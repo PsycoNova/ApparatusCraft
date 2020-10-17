@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "apparatus_craft:block/rubber_tree_sapling"
+  }
+}
