@@ -1,0 +1,81 @@
+Commands.literal("teleport").requires((ctx) -> ctx.hasPermissionLevel(2))
+
+// locateblock <block> [...]
+.then(arg("block")
+	.executes(() -> {})
+	
+	// locate <block> <player>
+	.then(arg("player")
+		.executes(() -> {})
+	)
+	
+	// locate <block> <location>
+	.then(arg("location")
+		.executes(() -> {})
+	)
+	
+	// locate <block> <radius> [...]
+	.then(arg("radius")
+		.executes(() -> {})
+		
+		// locate <block> <radius> <player>
+		.then(arg("player")
+			.executes(() -> {})
+		)
+		
+		// locate <block> <radius> <location>
+		.then(arg("location")
+			.executes(() -> {})
+		)
+	)
+)
+
+
+// tp <target> <...>
+.then(arg("targets")
+	// tp <target> <location> [...]
+	.then(arg("location")
+		.executes(() -> {})
+		
+		// tp <target> <location> <rotation>
+		.then(arg("rotation")
+			.executes(() -> {})
+		)
+		
+		// tp <target> <location> "facing" <...>
+		.then(lit("facing")
+			// tp <target> <location> "facing" "entity" <...>
+			.then(lit("entity")
+				// tp <target> <location> "facing" "entity" <facingEntity> [...]
+				.then(arg("facingEntity")
+					.executes(() -> {})
+					
+					// tp <target> <location> "facing" "entity" <facingEntity> <facingAnchor>
+					.then(arg("facingAnchor")
+						.executes(() -> {})
+					)
+				)
+			)
+			
+			// tp <target> <location> "facing" <facingLocation>
+			.then(arg("facingLocation")
+				.executes(() -> {})
+			)
+		)
+	)
+	
+	// tp <target> <destination>
+	.then(arg("destination")
+		.executes(() -> {})
+	)
+)
+
+// tp <location>
+.then(arg("location")
+	.executes(() -> {})
+)
+
+// tp <destination>
+.then(arg("destination")
+	.executes(() -> {})
+)

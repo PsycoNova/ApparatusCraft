@@ -1,23 +1,17 @@
 package net.cwcdev.mcmods.apparatus_craft.init;
 
 import net.cwcdev.mcmods.apparatus_craft.ApparatusCraft;
-import net.cwcdev.mcmods.apparatus_craft.blocks.RubberTreeLeavesBlock;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.block.trees.OakTree;
 import net.minecraft.entity.item.BoatEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.BoatItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-//@ObjectHolder(ApparatusCraft.MODID)
+//@ObjectHolder(ApparatusCraft.MOD_ID)
 public class ModItems {
-	public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ApparatusCraft.MODID);
+	public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ApparatusCraft.MOD_ID);
 
 	// Rubber Tree
 	public static final RegistryObject<Item> RUBBER_TREE_LOG = ITEMS.register("rubber_tree_log", () -> new BlockItem(ModBlocks.RUBBER_TREE_LOG.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
@@ -40,11 +34,19 @@ public class ModItems {
 	public static final RegistryObject<Item> RUBBER_TREE_SLAB = ITEMS.register("rubber_tree_slab", () -> new BlockItem(ModBlocks.RUBBER_TREE_SLAB.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<Item> RUBBER_TREE_BOAT = ITEMS.register("rubber_tree_boat", () -> new BoatItem(BoatEntity.Type.OAK, (new Item.Properties()).maxStackSize(1).group(ModItemGroups.MOD_ITEM_GROUP))); // fix this - Is BoatEntity.Type.OAK okay to use?
 
-	// Silicon
+	// Blocks & Ores
 	public static final RegistryObject<Item> SILICON_ORE = ITEMS.register("silicon_ore", () -> new BlockItem(ModBlocks.SILICON_ORE.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
-	public static final RegistryObject<Item> SILICON = ITEMS.register("silicon", () -> new Item((new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> BAUXITE = ITEMS.register("bauxite", () -> new BlockItem(ModBlocks.BAUXITE.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_ORE = ITEMS.register("aluminum_ore", () -> new BlockItem(ModBlocks.ALUMINUM_ORE.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 
+	// Dust, Ingots, Minerals, Gems
+	public static final RegistryObject<Item> SILICON = ITEMS.register("silicon", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_DUST = ITEMS.register("aluminum_dust", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_DUST_DIRTY = ITEMS.register("aluminum_dust_dirty", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> ALUMINUM_INGOT = ITEMS.register("aluminum_ingot", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
+	public static final RegistryObject<Item> GOLD_DUST = ITEMS.register("gold_dust", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 
 	// Misc
+	public static final RegistryObject<Item> POOP = ITEMS.register("poop", () -> new Item((new Item.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 	public static final RegistryObject<Item> MACHINE_FRAME = ITEMS.register("machine_frame", () -> new BlockItem(ModBlocks.MACHINE_FRAME.get(), (new BlockItem.Properties()).group(ModItemGroups.MOD_ITEM_GROUP)));
 }

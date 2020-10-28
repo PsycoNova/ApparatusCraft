@@ -1,39 +1,54 @@
 package net.cwcdev.mcmods.apparatus_craft;
 
-import net.cwcdev.mcmods.apparatus_craft.init.ModBlocks;
-import net.cwcdev.mcmods.apparatus_craft.init.ModItems;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import com.mojang.brigadier.CommandDispatcher;
+import net.cwcdev.mcmods.apparatus_craft.commands.ModCommandSide;
+import net.cwcdev.mcmods.apparatus_craft.init.*;
+import net.minecraft.command.CommandSource;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
-
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("apparatus_craft")
 public class ApparatusCraft
 {
-    public static final String MODID = "apparatus_craft";
-    // Directly reference a log4j logger.
+    public static final String MOD_ID = "apparatus_craft";
+
     private static final Logger LOGGER = LogManager.getLogger();
 
+    // Testing Settings
+    public static final boolean IS_DEV = true;
+    public static final int DEV_VERBOSITY = 0;
+
     public ApparatusCraft() {
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+
         // Register ModBlocks
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         // Register ModItems
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        // Register Features
+        //ModFeatures.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+
+        // Register Ores
+        forgeBus.addListener(EventPriority.HIGH, ModOres::generateOverworldOres);
+
+        // Register Commands
+        forgeBus.addListener(EventPriority.HIGH, this::registerClientCommands);
+        forgeBus.addListener(EventPriority.HIGH, this::registerServerCommands);
+
 
         /*
         // Register the setup method for modloading
@@ -45,9 +60,23 @@ public class ApparatusCraft
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         */
+    }
+
+	@SubscribeEvent
+    public void registerClientCommands(final FMLServerStartingEvent evt) {
+        CommandDispatcher<CommandSource> dispatcher = evt.getServer().getCommandManager().getDispatcher();
+        ModCommands.register(dispatcher, ModCommandSide.SERVER_ONLY);
+    }
+
+    @SubscribeEvent
+    public void registerServerCommands(final RegisterCommandsEvent evt) {
+        CommandDispatcher<CommandSource> dispatcher = evt.getDispatcher();
+        ModCommands.register(dispatcher, ModCommandSide.CLIENT_ONLY);
     }
 
     /*

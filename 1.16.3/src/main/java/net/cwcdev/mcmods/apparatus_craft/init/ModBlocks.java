@@ -11,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public final class ModBlocks {
-	public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ApparatusCraft.MODID);
+	public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ApparatusCraft.MOD_ID);
 
 	// Rubber Tree
 	public static final RegistryObject<Block> RUBBER_TREE_LOG = BLOCKS.register("rubber_tree_log", () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD)));
@@ -34,9 +34,10 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> RUBBER_TREE_BUTTON = BLOCKS.register("rubber_tree_button", () -> new WoodButtonBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> RUBBER_TREE_SLAB = BLOCKS.register("rubber_tree_slab", () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD, MaterialColor.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD)));
 
-	// Silicon
-	public static final RegistryObject<Block> SILICON_ORE = BLOCKS.register("silicon_ore", () -> new Block(Block.Properties.create(Material.ROCK)));
-
+	// Stone & Ores
+	public static final RegistryObject<Block> SILICON_ORE = BLOCKS.register("silicon_ore", () -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().hardnessAndResistance(3.0F, 3.0F)));
+	public static final RegistryObject<Block> BAUXITE = BLOCKS.register("bauxite", () -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().hardnessAndResistance(3.0F, 3.0F)));
+	public static final RegistryObject<Block> ALUMINUM_ORE = BLOCKS.register("aluminum_ore", () -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK).func_235861_h_().hardnessAndResistance(3.0F, 3.0F)));
 
 	// Misc
 	public static final RegistryObject<Block> MACHINE_FRAME = BLOCKS.register("machine_frame", () -> new Block(Block.Properties.create(Material.ROCK)));

@@ -22,7 +22,15 @@
   "item.apparatus_craft.rubber_tree_boat": "Rubber Tree Boat",
 
   "block.apparatus_craft.silicon_ore": "Silicon Ore",
+  "block.apparatus_craft.bauxite": "Bauxite",
+  "block.apparatus_craft.aluminum_ore": "Aluminum Ore",
+
   "item.apparatus_craft.silicon": "Silicon",
+  "item.apparatus_craft.aluminum_dust_dirty": "Dirty Aluminum Dust",
+  "item.apparatus_craft.aluminum_dust": "Aluminum Dust",
+  "item.apparatus_craft.aluminum_ingot": "Aluminum Ingot",
+  "item.apparatus_craft.gold_dust": "Gold Dust",
+  "item.apparatus_craft.poop": "Poop",
 
   "block.apparatus_craft.machine_frame": "Machine Frame"
 }
